@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script >
 
+            function loadDoc(){
+                const xhttp = XMLHttpRequest();
+                xhttp.onload = function(){
+                    document.getElementById("demo").innerHTML = this.responseText;
+                }
+                xhttp.open("GET", "velha-raposa.txt");
+                xhttp.send();
+            }
+
+        </script>
     </head>
 
     <body>
